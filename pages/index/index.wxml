@@ -1,0 +1,17 @@
+<!-- 轮播图 -->
+<swiper class="slider" >
+  <swiper-item wx:for="{{slides}}" wx:key="id">
+    <navigator wx:if="{{item.link}}" url="{{item.link}}">
+    <image src="{{item.image}}" mode="aspectfill"></image>
+    </navigator>
+    <image wx:else src="{{item.image}}" mode="aspectfill"></image>
+  </swiper-item>
+ 
+</swiper>
+<!-- 九宫格 -->
+<view class="grids">
+   <navigator class="item" url="/pages/list/list?cat={{item.id}}"wx:for="{{categories}}" wx:key="id">
+   <image src="{{item.icon}}"></image>
+   <text>{{item.name}}</text>
+   </navigator>
+</view>

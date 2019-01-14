@@ -1,0 +1,43 @@
+/* pages/index/index.wxss */
+.slider{
+  position: relative;
+  height: 380rpx;
+}
+
+.slider navigetor{
+  width:100%;
+  height:100%;
+  
+}
+
+.slider navigetor image{
+  width:100%;
+  height:100%;
+  
+}
+
+.grids{
+  background-color: #fff;
+  width:750rpx;
+  display: flex;
+  font-size: 28rpx;
+  flex-wrap: wrap;
+  
+}
+.grids .item{
+  
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   width:33.33333%;
+   height: 250rpx;
+   box-shadow: 0 0 1rpx #ccc;
+
+   
+   
+}
+.grids .item image{
+  width: 70rpx;
+  height:70rpx;
+}
