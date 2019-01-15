@@ -40,9 +40,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "列表",
-					"pathName": "pages/list/list"
+					"pathName": "pages/list/list",
+					"query": ""
 				}
 			]
 		}

@@ -111,6 +111,7 @@
   color: #fff;
   font-size: 24rpx;
   text-align: center;
+  z-index:999;
 }
 
 .loadmore {
@@ -120,7 +121,6 @@
   text-align: center;
 }
 
-/* //加载更多 */
 .loadmore.loading::before {
   content: '';
   width: 40rpx;
@@ -136,11 +136,9 @@
 
 @keyframes loading {
   from {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(-360deg)
+    transform: rotate(-360deg);
   }
 }
-
-

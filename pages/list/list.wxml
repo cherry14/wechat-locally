@@ -25,9 +25,10 @@
       <text class="address">地址：{{item.address}}</text>
       <text class="hours">营业时间：{{item.businessHours}}</text>
     </view>
-    <view class="score">{{item.scroe}}</view>
+    <view class="score">{{item.score}}</view>
   </navigator>
 </view>
+
 
 
 <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
