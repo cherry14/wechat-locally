@@ -11,7 +11,9 @@ Page({
     pageindex:0,
     pageSize:20,
     totalCount:0,
-    hasmore:true
+    hasmore:true,
+    
+    
 
 
   },
@@ -20,7 +22,7 @@ Page({
     let { pageindex,pageSize,searchText }=this.data
     const params = { _page: ++pageindex, limit: pageSize }
     if (searchText) params.q=searchText
-    fetch(`categories/${this.data.categories.id}/shops`, params).then(res => {
+    return fetch(`categories/${this.data.categories.id}/shops`, params).then(res => {
       const totalCount = parseInt(res.header['X-Total-Count'])
       const hasmore=this.data.pageindex*this.data.pageSize<totalCount
       const shops=this.data.shops.concat(res.data)
@@ -49,13 +51,36 @@ Page({
    
     
   },
+ 
+  // 自定义监听键盘输入事件进行搜索
+  searchmore(e){
+    
+    let listvalue = e.detail.value
+    let shops = this.data.shops
 
-  
+    let lists = []
+    this.data.shops.forEach(item=>{
+    if (item.name.includes(listvalue)){
+
+        lists.push(item)
+      }
+      if (listvalue==""){
+        this.loadmore()
+      }
+     })
+
+    this.setData({
+      shops:lists
+    })
+    
+},
+
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log("shangla")
+    this.setData({shops:[],pageindex:0,hasmore:true})
+    this.loadmore().then(() => wx.stopPullDownRefresh())
   },
 
   /**
@@ -64,6 +89,8 @@ Page({
   onReachBottom: function () {
     //  console.log("到底了")
     this.loadmore()
+      
+   
   },
 
   /**

@@ -1,64 +1,20 @@
-.weui-search-bar {
-      position: relative;
-    padding: 8px 10px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    box-sizing: border-box;
-    background-color: #EFEFF4;
+/* //搜索页 */
+.search{
+  width: 750rpx;
+  padding: 30rpx;
+  position: relative;
 }
-.weui-search-bar__form {
-    position: relative;
-    -webkit-box-flex: 1;
-    -webkit-flex: auto;
-    flex: auto;
-    background-color: #EFEFF4;
-}
-.weui-search-bar__box {
-    position: relative;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1;
-}
-.weui-search-bar__label {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
-    z-index: 2;
-    border-radius: 3px;
-    text-align: center;
-    color: #808080;
-    background: #FFFFFF;
-   
-}
-.weui-search-bar__label .weui-icon-search {
-  
-     align-items: center;
-     line-height: 60px;
-    
-}
+.serach-son {
+  width: 650rpx;
+  background-color:#fff;
+  padding:8px;
+  border-radius: 8px;
 
-[class^="weui-icon-"]:before, [class*=" weui-icon-"]:before {
-    display: inline-block;
-    margin-left: .2em;
-    margin-right: .2em;
-    
 }
-.weui-search-bar__label span {
-    display: inline-block;
-    font-size: 14px;
-    
-    
-}
-.weui-search-bar__text,.weui-icon-search {
-    float:right;
-    line-height: 40px;
-    margin-right:10px;
+.weui-icon-search {
+  position: absolute;
+  top:60rpx;
+  right: 120rpx;
 }
 
 /* 详情页 */

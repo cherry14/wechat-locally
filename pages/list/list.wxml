@@ -1,21 +1,11 @@
-<view class="weui-search-bar">
-  <view class="weui-search-bar__form">
-    <view class="weui-search-bar__box">
-      <icon class="weui-icon-search_in-box" type="search" size="14"/>
-      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{searchText}}" focus="{{searchShowed}}" bindinput="searchChangeHandle" bindconfirm="searchHandle"/>
-      <view class="weui-icon-clear" wx:if="{{searchText}}" bindtap="clearSearchHandle">
-        <icon type="clear" size="14"/>
-      </view>
-    </view>
-    <label class="weui-search-bar__label" hidden="{{searchShowed}}" bindtap="showSearchHandle">
-    <view class="weui-search-bar__text">搜索</view>
-      <icon class="weui-icon-search" type="search" size="14"/>
-      
-    </label>
-  </view>
-  <view class="weui-search-bar__cancel-btn" hidden="{{!searchShowed}}" bindtap="hideSearchHandle">取消</view>
+<view class="search">
+ <input placeholder="搜索想查找的店铺名称" auto-focus class="serach-son" name="name" bindinput="searchmore" />
+ 
+ <icon class="weui-icon-search" type="search" size="14" />
+ 
+ 
+ 
 </view>
-
 <view class="cells">
   <navigator class="item" wx:for="{{shops}}" wx:key="id">
     <image src="{{item.images[0]}}" mode="aspectFill"/>
@@ -31,7 +21,7 @@
 
 
 
-<view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+<view wx:if="{{hasmore}}" class="loadmore loading">正在加载...</view>
 <view wx:else class="loadmore">没有更多内容了</view>
 
 
